@@ -76,11 +76,11 @@ def calc_bag_power(max_gems_dict):
     print('sum of powers===', sum(powers))
 
 
+if __name__ == '__main__':
+    clean_data = remove_line_break_char(data)
+    organized_data = data_to_game_dict(clean_data)
 
-clean_data = remove_line_break_char(data)
-organized_data = data_to_game_dict(clean_data)
+    max_gems_per_game = find_max_gems_per_game(organized_data)
+    pprint.pprint(max_gems_per_game)
 
-max_gems_per_game = find_max_gems_per_game(organized_data)
-pprint.pprint(max_gems_per_game)
-
-powers = calc_bag_power(max_gems_per_game)
+    powers = calc_bag_power(max_gems_per_game)

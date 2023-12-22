@@ -74,10 +74,10 @@ def sort_games(data):
         
 
 
+if __name__ == '__main__':
+    clean_data = remove_line_break_char(data)
+    test = data_to_game_dict(clean_data)
+    pprint.pprint(test)
 
-clean_data = remove_line_break_char(data)
-test = data_to_game_dict(clean_data)
-pprint.pprint(test)
-
-sorted_games = sort_games(test)
-print('sorted games=', sorted_games)
+    sorted_games = sort_games(test)
+    print('sorted games=', sorted_games)
